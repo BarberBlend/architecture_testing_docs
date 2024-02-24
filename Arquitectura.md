@@ -1,34 +1,39 @@
-# Arquitectura para el modulo barber 
+# Arquitectura BarberBlend
 
 Autor:
  - Jesus Andres Osorio
 
 
-## 1 TL;DR
+## 1 Introduccion
 
-Se crean varios componentes para listar barberias y ver la informacion de la barberia. Estos componentes realizar las siguientes funciones:
-
-- Listar todas las barberias disponibles
-- Buscar una barberia por nombre
-- Ver la informacion de la barberia seleccionada
+BarberBlend es una innovadora aplicación web diseñada para brindar una experiencia personalizada a los usuarios de Cali al elegir su barbería y estilista favorito en la ciudad. Con un enfoque intuitivo y fácil de usar, BarberBlend permite a los usuarios seleccionar sus preferencias, desde el tipo de servicio hasta el estilista de su elección, brindándoles un control total sobre su experiencia de cuidado personal.
 
 
-## 2 Motivación
+## 2 Tecnologías y Herramientas Utilizadas
 
-Como una aplicación web innovadora llamada BarberBlend, nuestro objetivo es proporcionar a los usuarios de Cali una experiencia única al seleccionar su barbería y barbero preferido en la ciudad. Con un enfoque intuitivo y accesible, los usuarios pueden personalizar su experiencia eligiendo entre una variedad de servicios, incluyendo cortes de cabello, arreglos de barba o ambos, y seleccionando al estilista de su elección. En BarberBlend, ponemos el control en manos de nuestros usuarios, brindándoles una experiencia de cuidado personal sin igual en la vibrante ciudad de Cali.
+Lista de las tecnologías, lenguajes de programación, frameworks, plataformas y patrones de diseño utilizados en el proyecto:
+- ### Backend 
+- Lenguaje y framework: Java con Spring Boot
+- Base de Datos: PostgreSQL en AWS RDS
+- Autenticación: JWT (JSON Web Tokens) con Spring Security
+- Envío de Correos Electrónicos: Gmail
+- Patrones de diseño: DAO, DTO, Inyección de Dependencias, ORM.
+- ### Frontend
+- Lenguaje y framework: Next.js con TypeScript
+- Framework CSS: TailwindCSS
+- Patrones de diseño: Componentes reutilizables, renderización condicional.
+
+Se seleccionaron estas tecnologías debido a su facilidad de uso, escalabilidad, y amplia comunidad de soporte. Spring Boot ofrece una configuración rápida y un ecosistema robusto para el desarrollo de aplicaciones Java. Next.js con TypeScript proporciona un desarrollo de frontend eficiente y tipado estático para una mejor calidad del código. PostgreSQL en AWS RDS ofrece escalabilidad y alta disponibilidad para la base de datos, mientras que Gmail se utiliza para el envío de correos electrónicos por su confiabilidad y facilidad de integración.
 
 ## 3 Propuesta de implementación
 
-Se propone unos componentes que contenga la logica requerida para obtener la informacion necesario y mostrarla mediante endpoints.
+Se presenta el modelado de la arquitectura mediante el modelo C4
 
-![Model C4 Level3 (architecture of BarberBlend)](https://github.com/BarberBlend/architecture_testing_docs/blob/main/architecture-level3.png?raw=true)
+![Model C4 Level2 (architecture of BarberBlend)](https://github.com/BarberBlend/architecture_testing_docs/blob/main/architecture-level2.png?raw=true)
 
+## 4 Despligue
+- El frontend se desplegará en un servicio de alojamiento estático como AWS S3, aprovechando la capacidad de almacenamiento escalable y la entrega de contenido a través de Amazon CloudFront para garantizar un rendimiento óptimo y una disponibilidad continua.
+- El backend se implementará en AWS Elastic Beanstalk, un servicio administrado que simplifica el despliegue y la gestión de aplicaciones al manejar automáticamente tareas como el aprovisionamiento de recursos, el equilibrado de carga y la escalabilidad.
 
-### 3.1 Service - Backend-Service-Barbers
+Para el despliegue se usara Github Actions para implementar prácticas de integración continua (CI) y entrega continua (CD).
 
-Este servicio devuelve el listado de las barberias disponibles en Cali, ademas de que tambien traer la informacion de una barberia en especifico mediante un parametro que se le pasara al servicio en el EndPoint, con el formato de babers/{id}, de esta manera obteniendo el contenido de la base de datos tanto para una barberia en especifico o un listados de las barberias disponibles.
-
-## 4 Tecnologías
-
-- Java como lenguaje en el servicio
-- Se usara PostgreSQL como motor de base de datos
