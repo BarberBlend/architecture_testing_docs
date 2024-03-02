@@ -46,6 +46,16 @@ Reservar una cita en el dia y hora de su preferencia
 ver y cancelar citas 
 recibir notificaciones via correo sobre el agendamiento de la cita 
 
+Mantenibilidad 
+- Al manejar un sistema de tecnologias agiles como es el Scrum, este nos permite tener la capacidad de realizar cambios o mejoras, ya sea por nuevos requerimientos de negocio o errores encontrados en las pruebas usuario  realizadas por el QA 
+
+Disponibilidad
+- El aplicativo cuenta con la capacidad de mantener activa la sesión del usuario una vez iniciada, lo que evita la necesidad de iniciar sesión constantemente.
+
+Testabilidad 
+
+- el aplicativo se le haran constantes pruebas de usuario para  verificar que el software funcione correctamente con respecto a los atributos definidos anteriormente  antes de salir a produccion 
+
 ## 5 Propuesta de implementación
 
 Se presenta el modelado de la arquitectura mediante el modelo C4
