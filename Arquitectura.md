@@ -56,6 +56,14 @@ Testabilidad
 
 - el aplicativo se le haran constantes pruebas de usuario para  verificar que el software funcione correctamente con respecto a los atributos definidos anteriormente  antes de salir a produccion 
 
+ Portabilidad:
+
+- El aplicativo está diseñado para ser compatible con  web y movil 
+
+Confiabilidad:
+
+- Se realizan pruebas exhaustivas de estabilidad y robustez para garantizar que el aplicativo funcione de manera confiable incluso en condiciones adversas, minimizando así el riesgo de fallos inesperados que puedan afectar la experiencia del usuario.
+
 ## 5 Propuesta de implementación
 
 Se presenta el modelado de la arquitectura mediante el modelo C4
